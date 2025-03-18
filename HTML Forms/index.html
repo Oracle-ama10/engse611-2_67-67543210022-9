@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบฟอร์มติดต่อ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>แบบฟอร์มติดต่อ</h2>
+
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">ชื่อ:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">อีเมล:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">เบอร์โทรศัพท์:</label>
+        <input type="text" id="phone" name="phone" required pattern="\d+" title="กรุณากรอกตัวเลขเท่านั้น">
+      </div>
+      
+      <div class="form-group">
+        <label for="subject">หัวข้อที่ต้องการติดต่อ:</label>
+        <select id="subject" name="subject" required>
+          <option value="general">ทั่วไป</option>
+          <option value="support">สนับสนุน</option>
+          <option value="inquiry">สอบถามข้อมูล</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">ข้อความ:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      
+      <button type="submit">ส่ง</button>
+      <button type="reset">รีเซ็ต</button>
+    </form>
+
+    <h3>ข้อมูลที่ส่งมา</h3>
+    <ul id="submittedList">
+      <!-- ข้อมูลที่ถูกส่งจะถูกแสดงที่นี่ -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
