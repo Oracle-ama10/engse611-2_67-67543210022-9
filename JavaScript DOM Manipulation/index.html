@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-container">
+    <h2>My To-Do List</h2>
+
+    <div class="todo-input">
+      <input type="text" id="taskInput" placeholder="เพิ่มรายการ...">
+      <select id="taskCategory">
+        <option value="Work">งานที่ต้องทำ</option>
+        <option value="Personal">กิจกรรมส่วนตัว</option>
+        <option value="Other">อื่นๆ</option>
+      </select>
+      <button id="addTask">เพิ่มรายการ</button>
+    </div>
+
+    <ul id="taskList">
+      <!-- รายการจะถูกเพิ่มที่นี่ -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
